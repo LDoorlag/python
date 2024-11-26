@@ -6,8 +6,15 @@ class Television():
     MAX_VOLUME: int = 2
     MIN_CHANNEL: int = 0
     MAX_CHANNEL:int = 3
-    def __init__(self, status=False, muted=False, volume=0, channel=0) -> None:
-        
+    def __init__(self, status=False, muted=False, volume=MIN_VOLUME, channel=MIN_CHANNEL) -> None:
+        '''
+        init function initializes the Television object with the following parameters:
+        :param status: bool
+        :param volume: int
+        :param channel: int
+        :param muted: bool
+        :return: None
+        '''
         self.__status: bool = status
         self.__volume: int = volume
         self.__channel: int = channel
